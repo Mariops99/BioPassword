@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BioPassword</string>
+
+    <!-- Main Activity -->
+    <string name="welcome">Welcome!</string>
+    <string name="mainUI_hint">Use the finger print to continue</string>
+
+    <!-- FingerPrint Prompt -->
+    <string name="PromptTitle">Biometric SignIn</string>
+    <string name="PromptSubtitle">SignIn to access into BioPassword</string>
+    <string name="PromptDescription">Use biometrics to keep your passwords more secure</string>
+    <string name="PromptNegative">Cancel</string>
+    <string name="title_activity_view_passwords">Passwords</string>
+
+    <!-- First Fragment -->
+    <string name="GeneratePassword">Generate New Password</string>
+
+    <!-- Item Password -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="securePassword">Your new secure password</string>
+    <string name="Clipboard">Password copied to clipboard</string>
+    <string name="savePassword">Securly save you\'r password</string>
+    <string name="idenbtifyer">Identifyer</string>
+    <string name="identifyerHint">Twitter</string>
+    <string name="usernameHint">Email or Username</string>
+    <string name="passwordHint">You\'r password</string>
+    <string name="save">Securely Save</string>
+    <string name="errorSavePassword">Sorry, there was a problem saving your password, maybe you left some field empty?</string>
+    <string name="savePasswordSuccess">Your password was securely saved succesfully</string>
+    <string name="noPassword">No saved password found</string>
+</resources>

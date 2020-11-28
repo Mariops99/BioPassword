@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BioPassword</string>
+    <string name="welcome">Bienvenido!</string>
+    <string name="mainUI_hint">Usa la huella dactilar para continuar</string>
+    <string name="PromptTitle">Inicio de Sesión Biometrico</string>
+    <string name="PromptSubtitle">Inicia sesión para acceder en BioPassword</string>
+    <string name="PromptDescription">Usa componentes biometricos para mantener tus contraseñas seguras</string>
+    <string name="PromptNegative">Cancelar</string>
+    <string name="title_activity_view_passwords">Contraseñas</string>
+    <string name="username">Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="GeneratePassword">Generar Nueva Contraseña</string>
+    <string name="securePassword">Tu nueva contraseña segura</string>
+    <string name="Clipboard">Contraseña copiada al portapapeles</string>
+    <string name="savePassword">Guarda de forma segura tu contraseña</string>
+    <string name="idenbtifyer">Identificador</string>
+    <string name="identifyerHint">Twitter</string>
+    <string name="usernameHint">Correo electrónico o usuario</string>
+    <string name="passwordHint">Tu contraseña</string>
+    <string name="save">Guardado seguro</string>
+    <string name="errorSavePassword">Lo siento ha ocurrido un problema guardando tu contraseña, puede ser que dejaras algún campo vacío?</string>
+    <string name="savePasswordSuccess">Tu contraseña se guardó de forma segura correctamente</string>
+    <string name="noPassword">No se ha encontrado ninguna contraseña guardada</string>
+</resources>
