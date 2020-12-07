@@ -52,7 +52,7 @@ public class ViewPasswords extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                    Intent intent = new Intent(ViewPasswords.this, SavePassword.class);
+                    Intent intent = new Intent(ViewPasswords.this, SelectApp.class);
                     startActivity(intent);
             }
         });

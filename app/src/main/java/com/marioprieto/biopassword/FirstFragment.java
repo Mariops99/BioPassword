@@ -49,6 +49,7 @@ public class FirstFragment extends Fragment  implements PasswordAdapter.OnPasswo
         SQLiteController sqLiteController = new SQLiteController(getContext());
         ArrayList<Password> array = sqLiteController.getPassword();
         if(array.size() > 0) {
+            System.out.println(array.get(0).getID());
             noPassword.setVisibility(View.GONE);
         }
         passwordAdapter.addPasswords(array);
@@ -56,6 +57,6 @@ public class FirstFragment extends Fragment  implements PasswordAdapter.OnPasswo
 
     @Override
     public void onPasswordClick(int position) {
-        Toast.makeText(getContext(), "Tocado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Tocado" + position, Toast.LENGTH_SHORT).show();
     }
 }

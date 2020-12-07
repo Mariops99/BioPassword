@@ -34,6 +34,40 @@ public class PasswordAdapter extends RecyclerView.Adapter<PasswordAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull PasswordAdapter.ViewHolder holder, int position) {
         Password password = passwords.get(position);
+        switch (password.getIdentifyer()) {
+            case "Twitter":
+                break;
+            case "Instagram":
+                break;
+            case "Facebook":
+                break;
+            case "Google":
+                break;
+            case "Outlook":
+                break;
+            case "Protonmail":
+                break;
+            case "Tumblr":
+                break;
+            case "Pinterest":
+                break;
+            case "LinkedIn":
+                break;
+            case "Reddit":
+                break;
+            case "Spotify":
+                break;
+            case "Netflix":
+                break;
+            case "Amazon":
+                break;
+            case "HBO":
+                break;
+            case "Disney+":
+                break;
+            default:
+                break;
+        }
         holder.identifyer.setText(password.getIdentifyer());
         holder.username.setText(password.getUsername());
         holder.password.setText(password.getPassword());
@@ -52,11 +86,13 @@ public class PasswordAdapter extends RecyclerView.Adapter<PasswordAdapter.ViewHo
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
+        ImageView app_logo;
         TextView identifyer, username, password;
         OnPasswordListener onPasswordListener;
 
         public ViewHolder(@NonNull View itemView, OnPasswordListener onPasswordListener) {
             super(itemView);
+            app_logo = (ImageView) itemView.findViewById(R.id.app_logo);
             identifyer = (TextView) itemView.findViewById(R.id.identifyer);
             username = (TextView) itemView.findViewById(R.id.username);
             password = (TextView) itemView.findViewById(R.id.password);

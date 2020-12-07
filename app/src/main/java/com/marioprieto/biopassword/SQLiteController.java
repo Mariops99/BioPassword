@@ -38,13 +38,49 @@ public class SQLiteController extends SQLiteOpenHelper {
 
     public ArrayList<Password> getPassword() {
         SQLiteDatabase bd = getReadableDatabase();
-        Cursor cursor = bd.rawQuery("SELECT IDENTIFYER, USER, PASSWORD FROM PASSWORD", null);
+        Cursor cursor = bd.rawQuery("SELECT rowid, IDENTIFYER, USER, PASSWORD FROM PASSWORD", null);
         ArrayList<Password> passwords = new ArrayList<>();
         if(cursor.moveToFirst()) {
             do {
-                passwords.add(new Password(cursor.getString(0), cursor.getString(1), cursor.getString(2)));
+                passwords.add(new Password(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3)));
             } while (cursor.moveToNext());
         }
         return passwords;
+    }
+
+    public Password getConcretePassword(int rowID) {
+        SQLiteDatabase bd = getReadableDatabase();
+        Cursor cursor = bd.rawQuery("SELECT rowid, IDENTIFYER, USER, PASSWORD FROM PASSWORD WHERE rowid = " + rowID  , null);
+        Password password = null;
+        if(cursor.moveToFirst()) {
+            do {
+                password = new Password(cursor.getInt(0), cursor.getString(1), cursor.getString(2), cursor.getString(3));
+            } while (cursor.moveToNext());
+        }
+        return password;
+    }
+
+    public void updatePassword(int rowID, String nuevo_Identificador, String nuevo_Usuario, String nueva_Contraseña) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if(bd!=null) {
+            bd.execSQL("UPDATE PASSWORD SET IDENTYFYER =" + nuevo_Identificador + ", USER ="+ nuevo_Usuario + ", PASSWORD =" + nueva_Contraseña + " WHERE rowid =" + rowID);
+            bd.close();
+        }
+    }
+
+    public void deletePassword(){
+        SQLiteDatabase bd = getWritableDatabase();
+        if(bd!=null) {
+            bd.execSQL("DELETE FROM PASSWORD");
+            bd.close();
+        }
+    }
+
+    public void deleteConcretePassword(int rowID) {
+        SQLiteDatabase bd = getWritableDatabase();
+        if(bd!=null) {
+            bd.execSQL("DELETE FROM PASSWORD WHERE rowid =" + rowID);
+            bd.close();
+        }
     }
 }

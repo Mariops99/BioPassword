@@ -3,7 +3,7 @@
 
     <!-- Main Activity -->
     <string name="welcome">Welcome!</string>
-    <string name="mainUI_hint">Use the finger print to continue</string>
+    <string name="mainUI_hint">Tap on the finger print to continue</string>
 
     <!-- FingerPrint Prompt -->
     <string name="PromptTitle">Biometric SignIn</string>
@@ -22,11 +22,29 @@
     <string name="Clipboard">Password copied to clipboard</string>
     <string name="savePassword">Securly save you\'r password</string>
     <string name="idenbtifyer">Identifyer</string>
-    <string name="identifyerHint">Twitter</string>
+    <string name="identifyerHint">Example: Twitter</string>
     <string name="usernameHint">Email or Username</string>
     <string name="passwordHint">You\'r password</string>
     <string name="save">Securely Save</string>
     <string name="errorSavePassword">Sorry, there was a problem saving your password, maybe you left some field empty?</string>
     <string name="savePasswordSuccess">Your password was securely saved succesfully</string>
     <string name="noPassword">No saved password found</string>
+
+    <string name="twitter" translatable="false">Twitter</string>
+    <string name="instagram" translatable="false">Instagram</string>
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="gmail" translatable="false">Google</string>
+    <string name="outlook" translatable="false">Outlook</string>
+    <string name="protonmail" translatable="false">Protonmail</string>
+    <string name="tumblr" translatable="false">Tumblr</string>
+    <string name="pintertest" translatable="false">Pinterest</string>
+    <string name="linkedIn" translatable="false">LinkedIn</string>
+    <string name="reddit" translatable="false">Reddit</string>
+    <string name="spotify" translatable="false">Spotify</string>
+    <string name="neftlix" translatable="false">Netflix</string>
+    <string name="amazon" translatable="false">Amazon</string>
+    <string name="hbo" translatable="false">HBO</string>
+    <string name="disney" translatable="false">Disney+</string>
+    <string name="other">Other</string>
+    <string name="select">Select the application</string>
 </resources>
