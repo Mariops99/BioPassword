@@ -63,7 +63,7 @@ public class SQLiteController extends SQLiteOpenHelper {
     public void updatePassword(int rowID, String nuevo_Identificador, String nuevo_Usuario, String nueva_Contraseña) {
         SQLiteDatabase bd = getWritableDatabase();
         if(bd!=null) {
-            bd.execSQL("UPDATE PASSWORD SET IDENTYFYER =" + nuevo_Identificador + ", USER ="+ nuevo_Usuario + ", PASSWORD =" + nueva_Contraseña + " WHERE rowid =" + rowID);
+            bd.execSQL("UPDATE PASSWORD SET IDENTIFYER = '" + nuevo_Identificador + "', USER = '"+ nuevo_Usuario + "', PASSWORD = '" + nueva_Contraseña + "' WHERE rowid = " + rowID);
             bd.close();
         }
     }

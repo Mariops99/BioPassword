@@ -47,4 +47,5 @@
     <string name="disney" translatable="false">Disney+</string>
     <string name="other">Other</string>
     <string name="select">Select the application</string>
+    <string name="delete">Delete Password</string>
 </resources>

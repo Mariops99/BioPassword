@@ -24,4 +24,5 @@
     <string name="noPassword">No se ha encontrado ninguna contraseña guardada</string>
     <string name="other">Otro</string>
     <string name="select">Selecciona la aplicación</string>
+    <string name="delete">Borrar Contraseña</string>
 </resources>

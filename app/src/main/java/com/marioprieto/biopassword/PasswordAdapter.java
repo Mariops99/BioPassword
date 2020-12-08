@@ -36,36 +36,49 @@ public class PasswordAdapter extends RecyclerView.Adapter<PasswordAdapter.ViewHo
         Password password = passwords.get(position);
         switch (password.getIdentifyer()) {
             case "Twitter":
+                holder.app_logo.setImageResource(R.drawable.twitter);
                 break;
             case "Instagram":
+                holder.app_logo.setImageResource(R.drawable.instagram);
                 break;
             case "Facebook":
+                holder.app_logo.setImageResource(R.drawable.facebook);
                 break;
             case "Google":
+                holder.app_logo.setImageResource(R.drawable.google);
                 break;
             case "Outlook":
+                holder.app_logo.setImageResource(R.drawable.outlook);
                 break;
             case "Protonmail":
+                holder.app_logo.setImageResource(R.drawable.protonmail);
                 break;
             case "Tumblr":
+                holder.app_logo.setImageResource(R.drawable.tumblr);
                 break;
             case "Pinterest":
+                holder.app_logo.setImageResource(R.drawable.pinterest);
                 break;
             case "LinkedIn":
+                holder.app_logo.setImageResource(R.drawable.linkedin);
                 break;
             case "Reddit":
+                holder.app_logo.setImageResource(R.drawable.reddit);
                 break;
             case "Spotify":
+                holder.app_logo.setImageResource(R.drawable.spotify);
                 break;
             case "Netflix":
+                holder.app_logo.setImageResource(R.drawable.netflix);
                 break;
             case "Amazon":
+                holder.app_logo.setImageResource(R.drawable.amazon);
                 break;
             case "HBO":
-                break;
-            case "Disney+":
+                holder.app_logo.setImageResource(R.drawable.hbo);
                 break;
             default:
+                holder.app_logo.setImageResource(R.drawable.other);
                 break;
         }
         holder.identifyer.setText(password.getIdentifyer());

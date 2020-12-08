@@ -1,5 +1,6 @@
 package com.marioprieto.biopassword;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,7 @@ public class FirstFragment extends Fragment  implements PasswordAdapter.OnPasswo
     PasswordAdapter passwordAdapter;
     RecyclerView recyclerView;
     TextView noPassword;
+    ArrayList<Password> array;
 
     @Override
     public View onCreateView(
@@ -47,9 +49,8 @@ public class FirstFragment extends Fragment  implements PasswordAdapter.OnPasswo
         linearLayoutManager2.setStackFromEnd(true);
         recyclerView.setLayoutManager(linearLayoutManager2);
         SQLiteController sqLiteController = new SQLiteController(getContext());
-        ArrayList<Password> array = sqLiteController.getPassword();
+        array = sqLiteController.getPassword();
         if(array.size() > 0) {
-            System.out.println(array.get(0).getID());
             noPassword.setVisibility(View.GONE);
         }
         passwordAdapter.addPasswords(array);
@@ -57,6 +58,12 @@ public class FirstFragment extends Fragment  implements PasswordAdapter.OnPasswo
 
     @Override
     public void onPasswordClick(int position) {
-        Toast.makeText(getContext(), "Tocado" + position, Toast.LENGTH_SHORT).show();
+        Bundle bundle = new Bundle();
+        bundle.putInt("editable", 1);
+        bundle.putString("app_name", array.get(position).getIdentifyer());
+        bundle.putInt("id", array.get(position).getID());
+        Intent intent = new Intent(getContext(), SavePassword.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
